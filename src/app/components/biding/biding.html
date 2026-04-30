@@ -1,0 +1,25 @@
+<div class="container">
+  <p>{{ name }}</p>
+
+  <button (click)="toggle()" [style.backgroundColor]="nnn ? 'green' : 'aqua'">Color Change</button>
+
+  <p [style.color]="text ? 'gold' : 'blueviolet'">KKK</p>
+
+  <button (click)="colorChangeText()">text color change</button>
+
+  <div style="margin-top: 30px">
+    <button (click)="previous()">previous</button>
+    <img style="width: 300px" [src]="imageList[i]" alt="pss" />
+    <button (click)="next()">next</button>
+  </div>
+
+  <div style="margin-top: 30px">
+    <input type="text" [(ngModel)]="something" />
+    <p>some {{ something }}</p>
+  </div>
+
+  <p [style.color]="click ? 'red' : 'blue'">{{ flacko }}</p>
+
+  <button (click)="changeColor()">change color</button>
+  <button (click)="changeText()">change color</button>
+</div>

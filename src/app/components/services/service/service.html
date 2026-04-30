@@ -1,0 +1,29 @@
+<div class="nav">
+  <nav>
+    <ul (click)="all()">
+      All
+    </ul>
+    @for (item of allCategory; track $index) {
+      <ul (click)="filter(item.id)">
+        {{
+          item.name
+        }}
+      </ul>
+    }
+  </nav>
+</div>
+
+<div class="container">
+  @for (item of allProducts; track $index) {
+    <div class="card" style="width: 14rem">
+      <img [src]="item.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">
+          {{ item.price }}
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  }
+</div>

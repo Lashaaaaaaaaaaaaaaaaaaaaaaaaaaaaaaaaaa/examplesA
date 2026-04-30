@@ -1,0 +1,22 @@
+.container {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 30px;
+}
+
+.nav {
+  max-width: 1250px;
+  margin: 2em auto;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+ul {
+  cursor: pointer;
+}
