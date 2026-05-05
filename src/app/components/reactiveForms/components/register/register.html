@@ -1,0 +1,55 @@
+<form [formGroup]="formInfo" (ngSubmit)="register()">
+  <h3>Registration</h3>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" formControlName="lastName" />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" formControlName="lastName" placeholder="Last name" />
+    </div>
+  </div>
+
+  <div class="col">
+    <input type="number" class="form-control" placeholder="age" formControlName="age" />
+  </div>
+
+  <div class="col">
+    <input type="email" formControlName="email" class="form-control" placeholder="Email" />
+  </div>
+
+  <div class="col">
+    <input type="password" formControlName="password" class="form-control" placeholder="password" />
+  </div>
+
+  <div class="col">
+    <input type="text" formControlName="address" class="form-control" placeholder="address" />
+  </div>
+
+  <div class="col">
+    <input type="text" formControlName="phone" class="form-control" placeholder="Phone" />
+  </div>
+
+  <div class="col">
+    <input
+      type="number"
+      formControlName="zipcode"
+      class="form-control"
+      placeholder="zipcode"
+      maxlength="4"
+    />
+  </div>
+
+  <div class="col">
+    <select formControlName="gender" class="form-control">
+      <option value="" disabled hidden>Gender</option>
+      <option value="MALE">Male</option>
+      <option value="FEMALE">Female</option>
+    </select>
+  </div>
+
+  <div class="col">
+    <input type="text" formControlName="avatar" class="form-control" placeholder="Avatar URL" />
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary">sign up</button>
+</form>

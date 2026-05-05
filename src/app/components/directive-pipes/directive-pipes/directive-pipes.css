@@ -1,0 +1,27 @@
+.first {
+  color: aqua;
+}
+
+.second {
+  color: blueviolet;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin {
+  margin: 5em auto;
+}
