@@ -1,0 +1,17 @@
+<form #myForm="ngForm">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" [(ngModel)]="name" />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" [(ngModel)]="email" />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password" />
+  @if (invalidPassword) {
+    <p class="red">password is invalid</p>
+  }
+
+  <button (click)="onSubmit(myForm)">Submit</button>
+  <button (click)="setDefault()">setDefault</button>
+  <button (click)="reset(myForm)">reset</button>
+</form>

@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 2em auto;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px blueviolet;
+  color: blueviolet;
+}
+
+.red {
+  color: red;
+}

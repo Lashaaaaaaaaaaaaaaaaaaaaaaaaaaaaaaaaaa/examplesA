@@ -5,7 +5,7 @@ import { ReactiveForms } from './components/reactiveForms/components/reactive-fo
 import { Profile } from './components/reactiveForms/components/profile/profile';
 import { DirectivePipes } from './components/directive-pipes/directive-pipes/directive-pipes';
 import { Rxjs } from './components/rxjs/components/rxjs/rxjs';
-// import { TemplateForms } from './components/template-forms/template-forms';
+import { TemplateForm } from './components/template-forms/components/template-form/template-form';
 // import { ViewEncapsulation } from './components/view-encapsulation/view-encapsulation';
 // import { Animations } from './components/animations/animations';
 // import { InputOutput } from './components/input-output/components/input-output/input-output';
@@ -44,10 +44,10 @@ export const routes: Routes = [
         path: 'rxjs',
         component: Rxjs,
       },
-      //   {
-      //     path: 'templateForms',
-      //     component: TemplateForms,
-      //   },
+      {
+        path: 'templateForms',
+        component: TemplateForm,
+      },
       //   {
       //     path: 'viewEncapsulation',
       //     component: ViewEncapsulation,
