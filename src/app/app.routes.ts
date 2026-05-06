@@ -4,7 +4,7 @@ import { Service } from './components/services/service/service';
 import { ReactiveForms } from './components/reactiveForms/components/reactive-forms/reactive-forms';
 import { Profile } from './components/reactiveForms/components/profile/profile';
 import { DirectivePipes } from './components/directive-pipes/directive-pipes/directive-pipes';
-// import { ToDo } from './components/rxjs/to-do/to-do';
+import { Rxjs } from './components/rxjs/components/rxjs/rxjs';
 // import { TemplateForms } from './components/template-forms/template-forms';
 // import { ViewEncapsulation } from './components/view-encapsulation/view-encapsulation';
 // import { Animations } from './components/animations/animations';
@@ -40,10 +40,10 @@ export const routes: Routes = [
         path: 'directives-pipes',
         component: DirectivePipes,
       },
-      //   {
-      //     path: 'rxjs',
-      //     component: ToDo,
-      //   },
+      {
+        path: 'rxjs',
+        component: Rxjs,
+      },
       //   {
       //     path: 'templateForms',
       //     component: TemplateForms,

@@ -1,0 +1,10 @@
+<div class="todoDiv">
+  @for (item of allToDoList; track $index) {
+    <div class="todolist">
+      <h4>ID: {{ item.id }}</h4>
+      <p>userId: {{ item.userId }}</p>
+      <p>title: {{ item.title }}</p>
+      <p>completed: {{ item.completed }}</p>
+    </div>
+  }
+</div>

@@ -1,7 +1,17 @@
 .navbar {
-  background: linear-gradient(135deg, blueviolet, #7c3aed);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
   padding: 12px 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b026ff, #00f2ffbd, transparent);
+  opacity: 0.6;
 }
 
 .nav-container {
@@ -20,22 +30,34 @@
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: #e0e7ff;
   font-size: 16px;
-  transition: all 0.3s ease;
   padding: 6px 10px;
   border-radius: 6px;
+  transition: color 0.4s ease;
 }
 
-/* hover effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #b026ff, #00f2ffbd);
+  transition: width 0.4s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-
-/* active link (Angular) */
-.nav-links a.active {
-  background: #fff;
-  color: #4f46e5;
+  color: #ffffff;
 }

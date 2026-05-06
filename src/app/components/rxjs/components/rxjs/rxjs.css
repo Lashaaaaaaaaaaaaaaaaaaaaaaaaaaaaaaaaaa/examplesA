@@ -1,0 +1,20 @@
+.todoDiv {
+  max-width: 1300px;
+  margin: 3em auto;
+  border: 1px solid blueviolet;
+  border-radius: 9px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.todolist {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blueviolet;
+  border-radius: 9px;
+  padding: 10px;
+  width: 240px;
+}
