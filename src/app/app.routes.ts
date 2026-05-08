@@ -7,10 +7,7 @@ import { DirectivePipes } from './components/directive-pipes/directive-pipes/dir
 import { Rxjs } from './components/rxjs/components/rxjs/rxjs';
 import { TemplateForm } from './components/template-forms/components/template-form/template-form';
 import { ViewEncapsulation } from './components/viewEncapsulation/components/view-encapsulation/view-encapsulation';
-// import { Animations } from './components/animations/animations';
-// import { InputOutput } from './components/input-output/components/input-output/input-output';
-// import { One } from './components/hostBiding-hostListener/one/one';
-// import { Two } from './components/hostBiding-hostListener/two/two';
+import { Animations } from './components/animations/animations/animations';
 import { MainLayout } from './layouts/main-layout/main-layout';
 import { Error } from './components/error/error';
 import { authGuardGuard } from './components/viewEncapsulation/guards/auth-guard-guard';
@@ -40,7 +37,7 @@ export const routes: Routes = [
       {
         path: 'directives-pipes',
         component: DirectivePipes,
-        canActivate: [authGuardGuard]
+        canActivate: [authGuardGuard],
       },
       {
         path: 'rxjs',
@@ -54,21 +51,13 @@ export const routes: Routes = [
         path: 'viewEncapsulation',
         component: ViewEncapsulation,
       },
-      //   {
-      //     path: 'animations',
-      //     component: Animations,
-      //   },
+      {
+        path: 'animations',
+        component: Animations,
+      },
       //   {
       //     path: 'input-output',
       //     component: InputOutput,
-      //   },
-      //   {
-      //     path: 'hostBiding',
-      //     component: One,
-      //   },
-      //   {
-      //     path: 'hostListener',
-      //     component: Two,
       //   },
     ],
   },

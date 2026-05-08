@@ -1,0 +1,8 @@
+<div class="animate-container">
+  <div [@popState]="stateName" class="animate-div">
+    <p>Animations</p>
+    <p>{{ people[0].name }} {{ people[0].age }} {{ people[1].name }} {{ people[1].age }}</p>
+  </div>
+
+  <button (click)="toggle()" class="click">Click Me</button>
+</div>
