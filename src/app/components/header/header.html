@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar flex">
   <div class="nav-container">
     <ul class="nav-links">
       <li>
@@ -19,7 +19,23 @@
       <li>
         <a routerLink="templateForms" routerLinkActive="active">templateForms</a>
       </li>
+      <li>
+        <a routerLink="viewEncapsulation" routerLinkActive="active">viewEncapsulation</a>
+      </li>
     </ul>
+  </div>
+  <div class="auth-div">
+    <div>
+      @if (!isloggedIn()) {
+        <button class="auth-btn" routerLink="/reactiveForms">Log In</button>
+      }
+    </div>
+
+    <div>
+      @if (isloggedIn()) {
+        <button class="auth-btn" (click)="signout()">Sign Out</button>
+      }
+    </div>
   </div>
 </nav>
 <div class="gradient-line"></div>

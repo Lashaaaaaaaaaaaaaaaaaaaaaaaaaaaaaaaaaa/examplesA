@@ -9,6 +9,8 @@ import { AuthService } from '../../services/auth-service';
   styleUrl: './register.css',
 })
 export class Register {
+  public selected = '';
+
   constructor(private authService: AuthService) {}
 
   public formInfo: FormGroup = new FormGroup({

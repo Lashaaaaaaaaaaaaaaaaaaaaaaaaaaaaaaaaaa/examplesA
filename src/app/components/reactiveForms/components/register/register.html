@@ -40,8 +40,8 @@
   </div>
 
   <div class="col">
-    <select formControlName="gender" class="form-control">
-      <option value="" disabled hidden>Gender</option>
+    <select formControlName="gender" class="form-control" [(ngModel)]="selected">
+      <option value="" disabled selected>Gender</option>
       <option value="MALE">Male</option>
       <option value="FEMALE">Female</option>
     </select>
