@@ -1,0 +1,14 @@
+.click {
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  background: transparent;
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 15px;
+  width: 9%;
+}
+
+.click:hover {
+  box-shadow: 0 0 20px 2px blueviolet;
+  transition: all 0.3s;
+}

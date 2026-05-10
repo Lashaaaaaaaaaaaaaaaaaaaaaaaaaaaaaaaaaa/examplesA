@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="div" [@clickState]="stateName">
+    <h3>Input - Output</h3>
+
+    <!-- input -->
+    <!-- received message -->
+    <!-- <app-children [message]="'გიგზავნი მესიჯს მშობელი კომპონენტიდან'"></app-children> -->
+
+    <!-- output -->
+    <app-children (messageEvent)="recieveMessage($event)"></app-children>
+    <p style="margin-top: 20px">შვილისგან მიღებული {{ childMessage }}</p>
+
+    <p>მე ვარ მშობელი კომპონენტი</p>
+  </div>
+  <button (click)="toggle()" class="click">Click Me</button>
+</div>

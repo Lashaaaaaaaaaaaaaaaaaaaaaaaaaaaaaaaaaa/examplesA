@@ -11,6 +11,7 @@ import { Animations } from './components/animations/animations/animations';
 import { MainLayout } from './layouts/main-layout/main-layout';
 import { Error } from './components/error/error';
 import { authGuardGuard } from './components/viewEncapsulation/guards/auth-guard-guard';
+import { InputOutput } from './components/input-output/components/input-output/input-output';
 
 export const routes: Routes = [
   {
@@ -55,10 +56,10 @@ export const routes: Routes = [
         path: 'animations',
         component: Animations,
       },
-      //   {
-      //     path: 'input-output',
-      //     component: InputOutput,
-      //   },
+      {
+        path: 'input-output',
+        component: InputOutput,
+      },
     ],
   },
   {
