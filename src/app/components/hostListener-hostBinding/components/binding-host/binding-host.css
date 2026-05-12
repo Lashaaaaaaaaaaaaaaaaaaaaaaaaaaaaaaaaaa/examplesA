@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  border: 3px solid blueviolet;
+  border-radius: 12px;
+  padding: 10px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  width: 69%;
+  margin: 4em auto;
+  text-align: center;
+}
+
+:host(.active-card) {
+  background-color: rgb(255, 179, 14);
+  transform: scale(1.05);
+}

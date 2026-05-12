@@ -1,0 +1,6 @@
+.gradient-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b026ff, #00f2ffbd, transparent);
+  opacity: 0.6;
+}

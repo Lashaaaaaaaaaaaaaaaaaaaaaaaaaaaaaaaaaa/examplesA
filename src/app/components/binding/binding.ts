@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-biding',
+  selector: 'app-binding',
   imports: [FormsModule],
-  templateUrl: './biding.html',
-  styleUrl: './biding.css',
+  templateUrl: './binding.html',
+  styleUrl: './binding.css',
 })
-export class Biding {
+export class Binding {
   public name: string = 'Flacko';
 
   public nnn: boolean = false;

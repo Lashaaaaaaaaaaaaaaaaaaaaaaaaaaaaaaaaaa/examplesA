@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Biding } from './biding';
+import { BindingHost } from './binding-host';
 
-describe('Biding', () => {
-  let component: Biding;
-  let fixture: ComponentFixture<Biding>;
+describe('BindingHost', () => {
+  let component: BindingHost;
+  let fixture: ComponentFixture<BindingHost>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Biding]
+      imports: [BindingHost]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Biding);
+    fixture = TestBed.createComponent(BindingHost);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
