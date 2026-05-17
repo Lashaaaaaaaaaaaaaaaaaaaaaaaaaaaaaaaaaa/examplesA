@@ -1,0 +1,75 @@
+<h1 style="text-align: center; margin: 1em auto">Binding</h1>
+
+<div class="gradient-line"></div>
+
+<section>
+  <p>{{ flacko }}</p>
+
+  <p [style.color]="some ? 'gold' : 'aqua'">Faeywaaa</p>
+
+  <p (click)="changeColor()" [style.color]="click ? 'gold' : 'aqua'">Change Color</p>
+
+  <div class="ngModel">
+    <div [style.backgroundColor]="btnChangeColor ? 'aqua' : 'yellow'">
+      <p style="text-align: center">{{ someShit }}</p>
+    </div>
+    <button class="change-p-color" (click)="btnClick()">change paragraph color</button>
+  </div>
+
+  <div class="ngModel">
+    <input type="text" placeholder="type some shit" [(ngModel)]="typeText" />
+    <p>text: {{ typeText }}</p>
+  </div>
+
+  <div class="flex">
+    <button class="change-p-color" (click)="previous()">previous</button>
+    <img [src]="images[i]" alt="carusel" />
+    <button class="change-p-color" (click)="next()">next</button>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<h1 style="text-align: center; margin: 1em auto">Services</h1>
+
+<div class="gradient-line"></div>
+
+<section class="service-section">
+  <div class="category-div">
+    <button class="change-p-color" (click)="all()">All</button>
+    @for (item of allCategory; track $index) {
+      <button class="change-p-color" (click)="filter(item.id)">
+        {{ item.name }}
+      </button>
+    }
+  </div>
+
+  <div class="products-div">
+    @for (item of allProducts; track $index) {
+      <div class="card" style="width: 15rem">
+        <img [src]="item.image" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h6 class="card-title">{{ item.name }}</h6>
+          <p class="card-text">price: {{ item.price }} $</p>
+          <p>
+            @if (!item.nuts) {
+              <p>nuts: No</p>
+            } @else {
+              <p>nuts: Yes</p>
+            }
+          </p>
+          <p>
+            @if (!item.vegeterian) {
+              <p>vegeterian: No</p>
+            } @else {
+              <p>vegeterian: Yes</p>
+            }
+          </p>
+          <a href="#" class="btn change-p-color">Go somewhere</a>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<div class="gradient-line"></div>

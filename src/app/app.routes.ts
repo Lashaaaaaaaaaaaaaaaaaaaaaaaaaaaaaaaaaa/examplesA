@@ -13,6 +13,7 @@ import { Error } from './components/error/error';
 import { authGuardGuard } from './components/viewEncapsulation/guards/auth-guard-guard';
 import { InputOutput } from './components/input-output/components/input-output/input-output';
 import { HostBindingHostListener } from './components/hostListener-hostBinding/components/host-binding-host-listener/host-binding-host-listener';
+import { All } from './components/all/components/all/all';
 
 export const routes: Routes = [
   {
@@ -64,6 +65,10 @@ export const routes: Routes = [
       {
         path: 'hostListener-hostBinding',
         component: HostBindingHostListener,
+      },
+      {
+        path: 'all',
+        component: All,
       },
     ],
   },
