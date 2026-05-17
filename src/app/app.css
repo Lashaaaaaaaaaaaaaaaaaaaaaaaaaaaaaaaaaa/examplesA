@@ -7,3 +7,37 @@
   pointer-events: none;
   z-index: 9999;
 }
+
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #7b6cff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s,
+    height 0.2s,
+    background 0.2s;
+  mix-blend-mode: screen;
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(123, 108, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+/* hover სტეიტი — link-ებზე cursor იზრდება */
+:host-context(body:has(a:hover)) #cursor {
+  width: 20px;
+  height: 20px;
+  background: #00e5c3;
+}

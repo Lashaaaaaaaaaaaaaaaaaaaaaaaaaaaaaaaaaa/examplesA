@@ -1,6 +1,7 @@
 import {
   Component,
   signal,
+  OnInit,
   AfterViewInit,
   OnDestroy,
   ViewChild,
@@ -26,7 +27,7 @@ interface ShootingStar {
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App implements AfterViewInit, OnDestroy {
+export class App implements OnInit, AfterViewInit, OnDestroy {
   protected readonly title = signal('examplesA');
 
   @ViewChild('starCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
@@ -113,5 +114,49 @@ export class App implements AfterViewInit, OnDestroy {
 
       if (s.life <= 0) this.shootingStars.splice(i, 1);
     }
+  }
+
+  curX = 0;
+  curY = 0;
+  ringX = 0;
+  ringY = 0;
+
+  private targetX = 0;
+  private targetY = 0;
+
+  ngOnInit() {
+    // Mouse move — Angular-ის გარეთ ვაწარმოებთ change detection-ის თავიდან ასარიდებლად
+    this.ngZone.runOutsideAngular(() => {
+      document.addEventListener('mousemove', (e) => {
+        this.targetX = e.clientX;
+        this.targetY = e.clientY;
+
+        // cursor პირდაპირ მიყვება
+        this.ngZone.run(() => {
+          this.curX = e.clientX;
+          this.curY = e.clientY;
+        });
+      });
+
+      // ring lag-ით მიყვება — rAF loop
+      const animateRing = () => {
+        const dx = this.targetX - this.ringX;
+        const dy = this.targetY - this.ringY;
+
+        if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
+          this.ringX += dx * 0.1;
+          this.ringY += dy * 0.1;
+
+          this.ngZone.run(() => {
+            this.ringX = this.ringX;
+            this.ringY = this.ringY;
+          });
+        }
+
+        requestAnimationFrame(animateRing);
+      };
+
+      requestAnimationFrame(animateRing);
+    });
   }
 }
