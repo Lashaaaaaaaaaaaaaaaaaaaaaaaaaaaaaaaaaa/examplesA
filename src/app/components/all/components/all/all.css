@@ -104,3 +104,93 @@ section {
 .btn-primary {
   color: blueviolet;
 }
+
+.marquee-section {
+  padding: 19px 0;
+  overflow: hidden;
+  background: #333345;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 19s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6b6882;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.marquee-sep {
+  color: #7b6cff;
+  font-size: 0.5rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 12.9rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #6b6882;
+  text-transform: uppercase;
+  animation: fadeIn 1.5s 1s both;
+}
+.scroll-line {
+  width: 40px;
+  height: 3px;
+  background: #6b6882;
+  position: relative;
+  overflow: hidden;
+}
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #00e5c3;
+  animation: scanLine 2s ease-in-out infinite;
+}
+@keyframes scanLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.status-dot {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
