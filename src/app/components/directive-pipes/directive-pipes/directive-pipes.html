@@ -1,26 +1,33 @@
-<section class="flex">
-  <div class="container">
-    <div *ngFor="let item of usersArray">
-      <p [ngClass]="{ first: item.age < 18, second: item.age > 18 }">
-        {{ item.name }} {{ item.surname }}
-      </p>
-      <p [ngStyle]="{ color: 'gold' }">{{ item.age }}</p>
-      <p appCustomDirective>{{ item.student }}</p>
+<section class="main-s">
+  <section class="flex">
+    <div class="container">
+      <div *ngFor="let item of usersArray">
+        <p [ngClass]="{ first: item.age < 18, second: item.age > 18 }">
+          {{ item.name }} {{ item.surname }}
+        </p>
+        <p [ngStyle]="{ color: 'gold' }">{{ item.age }}</p>
+        <p appCustomDirective>{{ item.student }}</p>
+      </div>
     </div>
-  </div>
 
-  <div>
-    <input type="text" class="form-control" [(ngModel)]="inputText" placeholder="type some shit" />
-    <p>whatsap, {{ inputText | customPipe }}</p>
-  </div>
-</section>
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="inputText"
+        placeholder="type some shit"
+      />
+      <p>whatsap, {{ inputText | customPipe }}</p>
+    </div>
+  </section>
 
-<section class="flex margin">
-  <main>
-    <p appCustomDirective style="text-align: center">
-      {{ text | customPipe }}
-    </p>
-    <p>Purchases from {{ company | titlecase }} on {{ purchasedOn | date }}</p>
-    <p>Total: {{ amount | currency }}</p>
-  </main>
+  <section class="flex margin">
+    <main>
+      <p appCustomDirective style="text-align: center">
+        {{ text | customPipe }}
+      </p>
+      <p>Purchases from {{ company | titlecase }} on {{ purchasedOn | date }}</p>
+      <p>Total: {{ amount | currency }}</p>
+    </main>
+  </section>
 </section>

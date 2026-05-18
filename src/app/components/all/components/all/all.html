@@ -304,3 +304,194 @@
 </section>
 
 <div class="gradient-line"></div>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <!-- repeat -->
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      reactiveForms
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="gradient-line"></div>
+
+<section class="auth-section">
+  <form [formGroup]="signUpForm" class="signupForm" (ngSubmit)="register()">
+    <div class="f-div">
+      <label for="firstName">firstName</label>
+      <input type="text" id="firstName" placeholder="firstName" formControlName="firstName" />
+    </div>
+    <div class="f-div">
+      <label for="lastName">lastName</label>
+      <input type="text" id="lastName" placeholder="lastName" formControlName="lastName" />
+    </div>
+    <div class="f-div">
+      <label for="age">age</label>
+      <input type="number" id="age" placeholder="age" formControlName="age" />
+    </div>
+    <div class="f-div">
+      <label for="email">email</label>
+      <input type="text" id="email" placeholder="email" formControlName="email" />
+    </div>
+    <div class="f-div">
+      <label for="password">password</label>
+      <input type="text" id="password" placeholder="password" formControlName="password" />
+    </div>
+    <div class="f-div">
+      <label for="address">address</label>
+      <input type="text" id="address" placeholder="address" formControlName="address" />
+    </div>
+    <div class="f-div">
+      <label for="phone">phone </label>
+      <input type="text" id="phone" placeholder="phone" formControlName="phone" />
+    </div>
+    <div class="f-div">
+      <label for="zipcode ">zipcode </label>
+      <input type="text" id="zipcode" placeholder="zipcode " formControlName="zipcode " />
+    </div>
+    <div class="f-div">
+      <label for="avatar">avatar</label>
+      <input type="text" id="avatar" placeholder="avatar" formControlName="avatar" />
+    </div>
+    <div class="f-div">
+      <label for="select">gender</label>
+      <select name="Gender">
+        <option value="Gender" selected hidden>Gender</option>
+        <option value="MALE">MALE</option>
+        <option value="FEMALE">FEMALE</option>
+        <option value="OTHER">OTHER</option>
+      </select>
+    </div>
+    <button type="submit" class="change-p-color" style="margin: 10px auto 0; width: 36%">
+      Sign Up
+    </button>
+  </form>
+
+  <form [formGroup]="signInForm" class="signinForm" (ngSubmit)="signIn()">
+    <div class="first-last">
+      <p></p>
+      <p>{{ firstName }} {{ lastName }}</p>
+    </div>
+    <div class="login-pass">
+      <h5>Login</h5>
+      <h5>3hb3STBYcm</h5>
+    </div>
+    <div class="f-div">
+      <label for="email">email</label>
+      <input type="text" id="email" placeholder="email" formControlName="email" />
+    </div>
+    <div class="f-div">
+      <label for="password">password</label>
+      <input type="text" id="password" placeholder="password" formControlName="password" />
+    </div>
+    <button type="submit" class="change-p-color" style="margin: 10px auto 0; width: 36%">
+      Sign In
+    </button>
+  </form>
+</section>

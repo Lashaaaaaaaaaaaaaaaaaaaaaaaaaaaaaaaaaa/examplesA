@@ -194,3 +194,61 @@ section {
     opacity: 0.3;
   }
 }
+
+.auth-section {
+  display: flex;
+}
+
+.signupForm,
+.signinForm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid blueviolet;
+  padding: 20px;
+  width: 29%;
+  margin: auto;
+}
+
+.f-div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: blueviolet;
+}
+
+.f-div select,
+input {
+  padding: 6px;
+  background-color: transparent;
+  border: 1px solid blueviolet;
+  color: blueviolet;
+}
+
+.f-div input::placeholder {
+  color: blueviolet;
+}
+
+.f-div input:focus {
+  border-color: aqua;
+  outline: none;
+  box-shadow: 0 0 10px blueviolet;
+}
+
+.login-pass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: blueviolet;
+}
+
+.first-last {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -12px;
+}
+
+.first-last p {
+  position: relative;
+  bottom: 10px;
+}

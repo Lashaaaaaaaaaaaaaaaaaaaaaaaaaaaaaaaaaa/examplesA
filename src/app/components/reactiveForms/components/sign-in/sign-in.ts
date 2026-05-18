@@ -21,7 +21,7 @@ export class SignIn {
 
   signIn() {
     this.service.signIn(this.loginFormInfo.value).subscribe((data: any) => {
-      console.log();
+      console.log(data);
       sessionStorage.setItem('user', data.access_token);
       alert('success');
       this.router.navigate(['profile']);

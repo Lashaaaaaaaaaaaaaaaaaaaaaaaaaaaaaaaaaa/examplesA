@@ -1,17 +1,26 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { RestaurantService } from '../../services/restaurant-service';
+import { AuthService } from '../../services/auth-service';
 
 @Component({
   selector: 'app-all',
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './all.html',
   styleUrl: './all.css',
 })
-export class All {
+export class All implements OnInit {
   constructor(
     // SERVICES
     private restaurantService: RestaurantService,
+    // AUTH-SERVICES
+    private authService: AuthService,
   ) {
     this.getAllCategoriess();
     this.getAllProductss();
@@ -86,5 +95,50 @@ export class All {
 
   all() {
     this.getAllProductss();
+  }
+
+  // AUTH-SERVICES
+
+  public signUpForm: FormGroup = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    age: new FormControl(),
+    email: new FormControl(),
+    password: new FormControl(),
+    address: new FormControl(),
+    phone: new FormControl(),
+    zipcode: new FormControl(),
+    gender: new FormControl(),
+    avatar: new FormControl(),
+  });
+
+  register() {
+    this.authService.signUp(this.signUpForm.value).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  public signInForm: FormGroup = new FormGroup({
+    email: new FormControl(),
+    password: new FormControl(),
+  });
+
+  signIn() {
+    this.authService.signIn(this.signInForm.value).subscribe((data: any) => {
+      console.log(data);
+      sessionStorage.setItem('user', data.access_token);
+      alert('success');
+    });
+  }
+
+  public firstName: string = '';
+  public lastName: string = '';
+
+  ngOnInit(): void {
+    this.authService.getUser().subscribe((data: any) => {
+      console.log(data);
+      this.firstName = data.firstName;
+      this.lastName = data.lastName;
+    });
   }
 }
