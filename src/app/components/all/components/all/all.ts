@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RestaurantService } from '../../services/restaurant-service';
 import { AuthService } from '../../services/auth-service';
+import { User } from '../../modals/user.interface';
+import { CommonModule } from '@angular/common';
+import { CustomDirective } from '../../directives/custom-directive';
+import { CustomPipePipe } from '../../pipes/custom-pipe-pipe';
 
 @Component({
   selector: 'app-all',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, CustomDirective, CustomPipePipe],
   templateUrl: './all.html',
   styleUrl: './all.css',
 })
@@ -141,4 +139,21 @@ export class All implements OnInit {
       this.lastName = data.lastName;
     });
   }
+
+  // DIRECTIVES-PIPES
+
+  public usersList: User[] = [
+    { name: 'Lord', surname: 'Flacko', age: 22, student: false },
+    { name: 'Princess', surname: 'Mariami', age: 19, student: false },
+    { name: 'Queen', surname: 'Lolita', age: 20, student: true },
+    { name: 'Pretty', surname: 'Baby', age: 17, student: false },
+  ];
+
+  public typeSomeShit: string = '';
+
+  public lord = 'Flacko';
+
+  amount = 999.99;
+  company = 'acme corporation';
+  purchasedOn = '2026-22-09';
 }

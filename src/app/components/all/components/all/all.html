@@ -495,3 +495,154 @@
     </button>
   </form>
 </section>
+
+<div class="gradient-line"></div>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <!-- repeat -->
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+    <span class="marquee-item">
+      directives-pipes
+      <span class="marquee-sep">
+        <div class="status-dot">◆</div>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="gradient-line"></div>
+
+<section class="directives-pipes-section">
+  <div class="user-main-div">
+    <div *ngFor="let item of usersList" class="user-div hover-div">
+      <p [ngClass]="{ firstColor: item.age < 18, secondColor: item.age > 18 }">
+        {{ item.name }} {{ item.surname }}
+      </p>
+      <p [ngStyle]="{ color: 'rgb(255, 0, 64)' }">Age: {{ item.age }}</p>
+      <p [ngClass]="{ thirdColor: item.student != true }" appCustomDirective>
+        Student: {{ item.student ? 'Yes' : 'No' }}
+      </p>
+    </div>
+  </div>
+
+  <div class="some-div">
+    <div class="some-shit-div hover-div">
+      <input
+        type="text"
+        id="typeSomeShit"
+        class="some-shit-input"
+        placeholder="type some shit"
+        [(ngModel)]="typeSomeShit"
+      />
+      <p>some shit - {{ typeSomeShit | customPipe }}</p>
+    </div>
+
+    <div class="lord-div hover-div">
+      <h4 style="color: blueviolet; text-align: center">{{ lord | customPipe }}</h4>
+      <p>Purchases from {{ company | titlecase }} on {{ purchasedOn | date }}</p>
+      <p>Total: {{ amount | currency }}</p>
+    </div>
+  </div>
+</section>
